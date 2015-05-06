@@ -15,8 +15,8 @@ _.once = function(fn){
     }
 };
 
-_.memoize = function(fn){
-    var obj = new Array();
+_.memoize = function(fn,resolver){
+    var cache = {};
     var resolver = arguments[1];
 
     return function(o){
